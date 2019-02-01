@@ -3,12 +3,12 @@ import sys
 from binascii import hexlify, unhexlify
 from hashlib import sha1, sha256
 
-from jsonrpc.authproxy import AuthServiceProxy, JSONRPCException
+from bitcoinrpc.authproxy import AuthServiceProxy, JSONRPCException
 
 
-RPCUSER = 'MY_GARLICOIN_CORE_RPC_USERNAME'
-RPCPASSWORD = 'MY_GARLICOIN_CORE_RPC_PASSWORD'
-RPCPORT = 42068
+RPCUSER = 'MY_TUXCOIN_CORE_RPC_USERNAME'
+RPCPASSWORD = 'MY_TUXCOIN_CORE_RPC_PASSWORD'
+RPCPORT = 42072
 
 
 MAGIC = 'GRLCFILE'
