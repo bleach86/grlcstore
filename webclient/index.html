@@ -8,7 +8,7 @@ var FileInfo = null;
 var readTx = function (txid, successCb, failureCb) {
     $.ajax({
         'type':         'GET',
-        'url':          'https://garlicinsight.com/insight-grlc-api/tx/' + txid,
+        'url':          'http://explore.tuxtoke.life:3001/api/getrawtransaction?txid=' + txid + '&decrypt=1',
         'contentType':  'application/json',
         'dataType':     'json',
         'success':      function (data, textStatus, jqXHR) {
@@ -43,7 +43,7 @@ var hexToBase64 = function (hex) {
 var parseMasterFileIndex = function(rawData) {
     var info = {};
 
-    if (rawData.length != 5 || hexToBin(rawData[0], true) != 'GRLCFILE') {
+    if (rawData.length != 5 || hexToBin(rawData[0], true) != 'TUXFILE') {
         return null;
     }
 
